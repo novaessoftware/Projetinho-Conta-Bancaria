@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="1000" height="280" role="img" aria-labelledby="t d">
+  <title id="t">Conta Bancária em Java</title>
+  <desc id="d">Banner animado: o saldo de uma conta passa de 500.00 para 700.00 depois de um depósito, e para 395.00 depois de um saque com taxa.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1a24"/>
+      <stop offset="1" stop-color="#14405a"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .sans { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; }
+    .s { opacity: 0; animation: show 9s infinite; }
+    .s2 { animation-delay: 3s; }
+    .s3 { animation-delay: 6s; }
+    .bar { transform-box: fill-box; transform-origin: 0 50%; transform: scaleX(0.714); animation: bar 9s infinite; }
+    @keyframes show {
+      0% { opacity: 0; }
+      3%, 30% { opacity: 1; }
+      33%, 100% { opacity: 0; }
+    }
+    @keyframes bar {
+      0%, 30% { transform: scaleX(0.714); }
+      36%, 63% { transform: scaleX(1); }
+      69%, 96% { transform: scaleX(0.564); }
+      100% { transform: scaleX(0.714); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .s, .bar { animation: none; }
+      .s1 { opacity: 1; }
+    }
+  </style>
+
+  <rect width="1000" height="280" rx="18" fill="url(#bg)"/>
+
+  <text class="sans" x="56" y="88" font-size="14" letter-spacing="2.4" fill="#7fb8cf">JAVA · PROGRAMAÇÃO ORIENTADA A OBJETOS</text>
+  <text class="sans" x="56" y="152" font-size="54" font-weight="700" fill="#ffffff">Conta Bancária</text>
+  <text class="sans" x="56" y="192" font-size="17" fill="#b6c9d4">Encapsulamento · Construtores sobrecarregados</text>
+  <text class="sans" x="56" y="218" font-size="17" fill="#b6c9d4">Regras de negócio dentro da classe</text>
+
+  <rect x="640" y="48" width="312" height="184" rx="14" fill="#0a131a" stroke="#2b4656"/>
+  <text class="sans" x="664" y="86" font-size="12" letter-spacing="2" fill="#7fb8cf">SALDO</text>
+
+  <g class="s s1">
+    <text class="mono" x="664" y="136" font-size="36" font-weight="700" fill="#ffffff">$ 500.00</text>
+    <text class="sans" x="664" y="206" font-size="13" fill="#b6c9d4">Conta aberta com $ 500.00</text>
+  </g>
+  <g class="s s2">
+    <text class="mono" x="664" y="136" font-size="36" font-weight="700" fill="#ffffff">$ 700.00</text>
+    <text class="sans" x="664" y="206" font-size="13" fill="#b6c9d4">Depósito de $ 200.00</text>
+  </g>
+  <g class="s s3">
+    <text class="mono" x="664" y="136" font-size="36" font-weight="700" fill="#ffffff">$ 395.00</text>
+    <text class="sans" x="664" y="206" font-size="13" fill="#b6c9d4">Saque de $ 300.00 + taxa de $ 5.00</text>
+  </g>
+
+  <rect x="664" y="156" width="264" height="8" rx="4" fill="#25414f"/>
+  <rect class="bar" x="664" y="156" width="264" height="8" rx="4" fill="#3fb0d6"/>
+</svg>
